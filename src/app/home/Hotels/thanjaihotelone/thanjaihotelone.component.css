@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*{
+	font-family: 'Nunito', sans-serif;
+}
+.overview{
+    margin-top: 9%;
+}
+.item
+{
+   margin: 1rem;
+   border-radius: 2rem;
+}
+h3{
+    font-size: 25px;
+    margin: 4rem;
+}
+.flex-container {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	margin: 0;
+    background-color:lightgoldenrodyellow;
+}
+
+
+.flex-item {
+	flex: 1;
+	margin: 5px;
+	padding-left: 0;
+}
+
+.gallery{
+    margin-top: 4%;
+    
+}
+
+.deluxeroom
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(223, 227, 230);
+    margin-right: 0%;
+    width: 25%;
+    margin: 8px;
+}
+
+.deluxeroom-twin
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(223, 227, 230);
+    margin-right: 0%;
+    width: 25%;
+    margin: 8px;
+}
+.single-room
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(223, 227, 230);
+    margin-right: 0%;
+    width: 25%;
+    margin: 8px;
+}
+.double-room
+{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(223, 227, 230);
+    margin-right: 0%;
+    width: 25%;
+    margin: 8px;
+}
+.text{
+    
+    margin-left: 2rem;
+    
+}
+.Reserve{
+    display: flex;
+    flex-direction: column;
+}
+.btn {
+
+    display: inline;
+    margin: auto;
+    background: orange;
+    color: black;
+    padding: .4rem 2rem;
+    border: .2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 1, 7rem;
+	margin-left: 6px;
+}
+
+.rooms{
+    display: flex;
+    flex-direction: row;
+    margin: 2rem;
+  
+}
+.review{
+    margin: 2rem;
+}
+.review .box{
+    padding: 1rem;
+    text-align:center;
+    box-shadow:  0 1rem 2rem rgba(0,0,0,.1);
+    border-radius: 1rem;
+}
+
+.review .review-slider{
+    padding-bottom: 2rem;
+}
+
+.review .box{
+    background-color:  #eee;
+    width: 350px;
+    height: 400px;
+    margin: 2rem;
+}
+.review .box h3{
+    color: #333;
+    font-size: 2.5rem;
+
+}
+
+
+.review .box p{
+    color: black;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.review .box .stars{
+    color:orange;
+    font-size: 1.7rem;
+
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+tbody{
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: collapse;
+    width: 1000px;
+    height: 500px;
+    border: 2px solid #eee;
+    box-shadow: 2px 2px 12px #eee;
+    
+   
+}
+tr{
+    transition: all .2s ease-in;
+    cursor: pointer;
+    margin: 1rem;
+}
+tr,td{
+    padding: 5px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+   
+}
+#header{
+    background-color: orange;
+    color: #fff;
+}
+tr:hover{
+    background-color:orange;
+    transform: scale(1.02);
+    box-shadow: 1px 2px 12px #eee;
+    padding-left: 4rem;
+}
+/*
+@media(max-width:1200px){
+	html{
+		font-size: 55%;
+	}
+	}
+
+@media(max-width:450px) {
+    html {
+        font-size: 55%;
+    }
+
+}
+@media(max-width:1200px){
+	html{
+		font-size: 55%;
+	}
+	body{
+		width: 100%;
+	}
+	}
+	@media(min-width:991px){
+		body{
+			background-size: cover;
+		}
+	}
+*/
+    .table-size{
+        margin-top: 5%;
+    }
+    .section{
+        margin: 2rem;
+        padding: 0;
+        height: 600px;
+        width: 1500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slider{
+        width: 1300px;
+        height: 500px;
+        border-radius: 6px;
+        overflow: hidden;
+    }
+    /* @media(max-width:1200px){
+        html{
+            font-size: 55%;
+        }
+        body{
+            width: 100%;
+        }
+        }
+        @media(min-width:991px){
+            body{
+                background-size: cover;
+            }
+        } */
+
+        @media(max-width:1200px){
+            html{
+                font-size: 55%;
+            }
+            }
+        
+        @media(max-width:450px) {
+            html {
+                font-size: 55%;
+            }
+        
+        }
+        @media(max-width:1200px){
+            html{
+                font-size: 55%;
+            }
+            body{
+                width: 100%;
+            }
+            }
+            @media(min-width:991px){
+                body{
+                    background-size: cover;
+                }
+            }

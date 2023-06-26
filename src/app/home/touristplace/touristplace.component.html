@@ -1,0 +1,24 @@
+<html>
+    <body>
+      <div class="main-container">
+        <div class="container">
+            <a routerLink="/home/India/thanjai" class="image-link"  (click)="getname(placedetails.placename)"> 
+                <div class="image" >
+                  <img class="item"
+                    src={{placedetails.imagelink}}
+                    style="width: 300px; height: 300px;">
+                  <figcaption >{{placedetails.placename}} <br> {{placedetails.statename}}</figcaption>
+                  <div></div>
+                </div>
+              </a>
+              <div class="content">
+
+                <h1>{{placedetails.placeinformation}} </h1><br>
+                <p>{{placedetails.detailedinformation}}</p>
+              </div>
+        </div>
+      </div>
+        
+    </body>
+</html>
+

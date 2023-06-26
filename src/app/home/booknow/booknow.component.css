@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*{
+	font-family: 'Nunito', sans-serif;
+}
+ section{
+	padding: 2rem 10%;
+}
+
+.heading{
+	text-align: center;
+	padding: 2.5rem 4rem;
+	top: 20%;
+	margin-top: 10%;
+}
+body{
+	background-image: url("https://c4.wallpaperflare.com/wallpaper/921/708/937/best-hotels-travel-thailand-tourism-wallpaper-preview.jpg");
+	background-size:cover ;
+	background-repeat: no-repeat;
+	 width: 100%;
+	height: 85%; 
+	position: absolute;
+	/*
+    top: 0;
+    left: 0;
+    z-index: -1;
+	*/
+} 
+
+.heading span{
+	font-size: 3.5rem;
+	background-color:orange;
+	color:var(--blue);
+	border-radius: .5rem;
+	padding: .2rem 1rem;
+}
+
+.heading span.space{
+	background: none;
+}
+
+.heading span{
+	font-size: 3rem;
+}
+
+h4{
+	font-size: 17px;
+}
+h1{
+	font-weight: bold;
+	color: rgb(255, 253, 253);
+
+}
+
+
+input {
+	background-color: #eee;
+	border: none;
+	padding: 2px 3px;
+	margin: 1px 2px;
+	width: 100%;
+}
+
+
+
+.btn {
+
+    display: inline;
+    margin: auto;
+    background: orange;
+    color: balck;
+    padding: .4rem 2rem;
+    border: .2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 1, 7rem;
+	margin-left: 40px;
+}
+
+.btn:hover {
+    background: orange;
+    color: var(--orange);
+}
+
+
+
+.book  form{
+	top: 10%;
+	flex:  1 40rem;
+	padding: 2rem;
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 1);
+	border-radius: .5rem;
+	background-color:#eee;
+	width: 950px;
+	height: 400px;
+
+	
+	
+}
+
+.flex-container {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	margin: 0;
+	margin-top: 7%;	
+}
+
+
+.flex-item {
+	flex: 1;
+	margin: 5px;
+	padding-left: 0;
+}
+@media(max-width:1200px){
+	html{
+		font-size: 55%;
+	}
+	}
+
+@media(max-width:450px) {
+    html {
+        font-size: 55%;
+    }
+
+}
+@media(max-width:1200px){
+	html{
+		font-size: 55%;
+	}
+	body{
+		width: 100%;
+	}
+	}
+	@media(min-width:991px){
+		body{
+			background-size: cover;
+		}
+	}
+/*
+ .box-container{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	gap:2rem;
+}
+
+.packages .box-container .box{
+	/* flex :1 1 20rem; 
+	border-radius: .5rem;
+	overflow: hidden;
+	box-shadow: 0 1rem 2rem rgba(0,0,0,1);
+}
+.packages .box-container .box img{
+	height: 25rem;
+	width: 100%;
+	/* object-fit: cover; 
+}
+.packages .box-container .box .content{
+	padding: 0.5rem;
+}
+.packages .box-container .box .content h3{
+	padding: 0.5rem;
+	color: #333;
+}
+
+.packages .box-container .box .content p{
+	padding: 0.5rem 0;
+	font-size: 1.7rem;
+	color: #333;
+
+}
+
+.packages .box-container .box .content .price{
+	font-size: 2rem;
+	color: #333;
+	padding-top:.5rem ;
+}
+*/
+
+.item
+{
+   margin: 20px; 
+   border-radius: 2rem;
+}
+
+
+ .image-link {
+    display: inline-block;
+    position: relative;
+}
+
+.image-link img {
+    display: block;
+}
+
+figure {
+	position: relative;
+  }
+  
+  figcaption {
+	position: absolute;
+	margin-left:25px;
+	left:0;
+	top:0;
+	font-size:35px;
+	font-weight: bold;
+	text-align: center;
+	background-color: none;
+	color:black;
+	padding: 10px;
+  }
+
+ .packages{
+	padding: 1rem ;
+  }
+
+  
+  .flex-container-two{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	margin: 0;
+  }
+  .offer{
+	background-color:#eee;
+	padding :10rem 4rem;
+		
+  }
+.offer .offer-text{
+	display: block;
+}
+@media(max-width:991px) {
+    html {
+        font-size: 55%;
+    }
+	body{
+		width: 100%;
+	}
+	.btn{
+		display: inline;
+    margin: auto;
+    background: orange;
+    color: balck;
+    padding: .4rem 2rem;
+    border: .2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 1rem;
+	margin-left: 10px;
+	}
+	.packages{
+		width: 100%;
+	}
+}

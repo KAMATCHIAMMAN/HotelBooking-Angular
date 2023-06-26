@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+*{
+	font-family: 'Nunito', sans-serif;
+}
+h1{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 9%;
+}
+h2{
+    font-weight: bold;font-size: 40px;margin-left: 100px;
+}
+p{
+    margin-right: 5rem;
+    margin-left: 5rem;
+    justify-content:center;
+    text-align: justify;
+  
+    
+}
+img {
+    width: 550px;
+    height: 340px;align-items: center;
+    margin-left: 400px;
+}
+
+.item
+{
+   margin: 20px; 
+   border-radius: 2rem;
+}
+
+
+ .image-link {
+    display: inline-block;
+    position: relative;
+}
+
+.image-link img {
+    display: block;
+}
+
+figure {
+	position: relative;
+  }
+  
+  figcaption {
+	position: absolute;
+	margin-left:25px;
+	left:0;
+	top:0;
+	font-size:35px;
+	font-weight: bold;
+	text-align: center;
+	background-color: none;
+	color:black;
+	padding: 10px;
+  }
+
+   .packages{
+	padding: 1rem ;
+  }
+
+  
+  .flex-container-two{
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	margin-left:200px ;
+  }
+  .btn {
+
+    display: inline;
+    margin: auto;
+    background: orange;
+    color: balck;
+    padding: .4rem 2rem;
+    border: .2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 1, 7rem;
+	margin-left: 40px;
+}
+
+.btn:hover {
+    background: orange;
+    color: var(--orange);
+}
+@media(max-width:1200px){
+	html{
+		font-size: 55%;
+	}
+	body{
+		width: 100%;
+	}
+	}
+	@media(min-width:991px){
+		body{
+			background-size: cover;
+		}
+    img {
+      width: 550px;
+      height: 340px;
+      margin-left:0;
+  }
+  
+  .item
+  {
+     margin: 10px; 
+     border-radius: 1rem;
+  }
+	}

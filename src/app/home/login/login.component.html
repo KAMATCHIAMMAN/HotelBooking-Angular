@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<meta name="viewpoint" content="width=device-width,initial-scale=0.1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<div class="container" id="container">
+<div class="form-container sign-in-container">
+	<form [formGroup]="reactiveForm" (ngsubmit)="onSubmit()" >
+		<h1>Sign In</h1>
+		<div class="social-container">
+		<a href="#" class="social"><i class="fa fa-facebook"></i></a>
+		<a href="#" class="social"><i class="fa fa-google"></i></a>
+		<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+	</div>
+	<span>or use your account</span>
+
+	<input type="email" name="email" placeholder="Email" formControlName="email" [ngClass]="{error:getControl('email')?.errors && getControl('email').touched}"  [(ngModel)]=" valuetwo ">
+				<div *ngIf="getControl('email')?.errors && getControl('email')?.touched" style="color: red; align-content: last baseline;">
+					<small class="text-danger" *ngIf="getControl('email')?.errors?.['required']">Email is required</small>
+					<small class="text-danger" *ngIf="getControl('email')?.errors?.['email']">Please enter a vaild type</small>
+				</div> 
+				
+				<input type="password" name="password" placeholder="Password" formControlName="password" [ngClass]="{error:getControl('password')?.errors && getControl('password').touched}" [(ngModel)]=" valuethree ">
+				
+				<div *ngIf="getControl('password')?.errors && getControl('password')?.touched" style="color: red; align-content: last baseline;">
+					<small class="text-danger" *ngIf="getControl('password')?.errors?.['required']">Password is required</small>
+					<small class="text-danger" *ngIf="getControl('password')?.errors?.['minlength']">Please enter vaild password with the maximum length of 8</small>
+				</div> 
+
+	
+	<a href="home/register" style="color:blue;align-items:normal;">Forgot Your Password</a>
+
+	<button class="btn" (click)="checkvaule()">Sign In</button>
+	<p class="register">New User?<a href="/home/register" style="color:blue;">Register here!</a></p>
+	</form>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<head>
+  <title>KS HotelBooking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <div class="book">
+    <div class="container">
+      <form [formGroup]="paymentForm" (ngSubmit)="submit()">
+
+        <div class="row">
+          <div class="col">
+            <h3 class="title">Billing Details</h3>
+
+            
+
+             <div class="inputBox">
+              <span>UserId</span>
+              <input type="text" class="form-control" name="UserId" [(ngModel)]="userid"  formControlName="userid" [(ngModel)]="userid">
+              <span  *ngIf ="f['name'].getError('required')!=null &&f['name']?.touched" style="color:red">Enter userid</span> 
+              <span  *ngIf ="f['name'].getError('minlength')!=null" style="color:red">Enter userid</span>
+            </div>
+            <div class="inputBox">
+              <span>Email</span>
+              <input type="text" class="form-control" name="Email" [(ngModel)]="email"  formControlName="email" [(ngModel)]="email">
+              <span  *ngIf ="f['name'].getError('required')!=null &&f['name']?.touched" style="color:red">Enter email</span> 
+              <span  *ngIf ="f['name'].getError('email')!=null" style="color:red">Enter email</span>
+            </div>
+            <div class="inputBox">
+              <span>Date</span>
+              <input type="text" class="form-control" name="UserId" [(ngModel)]="Date"  formControlName="Date" [(ngModel)]="Date">
+              <span  *ngIf ="f['name'].getError('required')!=null &&f['name']?.touched" style="color:red">Enter Date</span> 
+            </div> 
+          
+         
+          <h3>{{hotelname}}</h3>
+          <h3>Noofrooms:{{totalrooms}}</h3>
+          <h3>Totalamount :</h3>
+          <h3>Rs.{{grandtotal}}</h3>
+
+
+
+        </div>
+
+
+        <div class="col">
+
+          <h3 class="title">payment</h3>
+
+          <div class="inputBox">
+            <span>cards accepted :</span>
+            <img src="https://www.unionbankofindia.co.in/Images/Classic-Debit-card-RupayVisa.png" alt="">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9yPKKtxIxtm5F9M6wce21Bakh_vsCuUeqgQ&usqp=CAU">
+            <img src="https://www.transparentpng.com/thumb/credit-card/bJ96qO-credit-card-cut-out-png.png">
+          </div>
+          <div class="inputBox">
+            <span>name on card :</span>
+            <input type="text" placeholder="kamatchi" formControlName="cardname"  [(ngModel)]="cardname">
+            <span  *ngIf ="f['cardname'].getError('required')!=null &&f['cardname']?.touched" style="color:red">Enter user name</span> 
+            <span  *ngIf ="f['cardname'].getError('minlength')!=null" style="color:red">Name should be atleast 5 letters</span>
+          </div>
+          <div class="inputBox">
+            <span>credit card number :</span>
+            <input type="text" placeholder="1111-2222-3333-4444" formControlName="cardnumber"  [(ngModel)]="cardnumber" (click)="sendnumber()">
+            <span  *ngIf ="f['cardnumber'].getError('required')!=null &&f['cardnumber']?.touched" style="color:red">Enter card number</span>
+            <!--<span  *ngIf ="f['cardnumber'].getError('pattern')!=null" style="color:red">cardnumber should be xxxx-xxxx-xxxx-xxxx</span>-->
+            <span  *ngIf ="f['cardnumber'].getError('maxlength')!=null" style="color:red">cardnumber should be maximum of 16 letters</span>
+            <span  *ngIf ="f['cardnumber'].getError('minlength')!=null" style="color:red">card number should be minimum of 16 letters</span>
+          </div>
+          <div class="flex">
+          <div class="inputBox" >
+            <span>exp month :</span>
+           <select formControlName="month"  [(ngModel)]="month">
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>Octobar</option>
+            <option>Novembar</option>
+            <option>December</option>
+           </select>
+           <span  *ngIf ="f['month'].getError('required')!=null &&f['month']?.touched" style="color:red">select month</span> 
+          </div>
+
+          
+            <div class="inputBox">
+              <span>exp year :</span>
+              <select formControlName="year"  [(ngModel)]="year">
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
+                <option>2026</option>
+              </select>
+              <span  *ngIf ="f['year'].getError('required')!=null &&f['year']?.touched" style="color:red">select year</span> 
+            </div>
+          </div>
+            <div class="inputBox">
+              <span>CVV :</span>
+              <input type="password" placeholder="123" formControlName="cvv"  [(ngModel)]="cvv">
+              <span  *ngIf ="f['cvv'].getError('required')!=null &&f['cvv']?.touched" style="color:red">Enter cvv number</span> 
+              <span  *ngIf ="f['cvv'].getError('maxlength')!=null" style="color:red">CVV should be maximum of 3 letters</span>
+              <span  *ngIf ="f['cvv'].getError('minlength')!=null" style="color:red">CVV should be minimum of 3 letters</span>
+            </div>
+          </div>
+      
+        
+    </div>
+
+
+    <!-- <input type="submit" value="payment" class="submit-btn" [disabled]="paymentForm.invalid"> -->
+    <button class="btn" (click)="success()">Submit</button>
+
+
+    </form>
+  </div>
+  </div>
+  
+
+</body>

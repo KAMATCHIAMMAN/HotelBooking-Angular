@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    position: relative;
+    z-index: 0;
+}
+h1{
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    margin: -3rem;
+    
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.home.content {
+    text-align: center;
+}
+
+.home.content {
+    font-size: 4.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 .3rem .5rem orange;
+}
+
+.home.content h1 {
+    font-size: 10rem;
+    color: orange;
+    text-transform: uppercase;
+    text-shadow: 0 0.3rem .5rem rgba(0, 0, 0, 1);
+}
+
+.home.content h1 {
+    font-size: 10rem;
+    text-transform: uppercase;
+    text-shadow: 0 0.3rem .5rem orange;
+}
+
+a {
+    align-items: center;
+}
+
+.btn {
+
+    display: inline;
+    margin: auto;
+    background: orange;
+    color: balck;
+    padding: .8rem 3rem;
+    border: .2rem solid var(--orange);
+    cursor: pointer;
+    font-size: 1, 9rem;
+    margin-left: 200px;
+
+}
+
+.btn:hover {
+    background: orange;
+    color: var(--orange);
+}
+
+.home .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+}
+.heading{
+    align-items: center;
+    margin-left: 200px;
+    margin-top: 0rem;
+}
+.heading span{
+    align-items: center;
+	font-size: 3.5rem;
+	background-color:orange;
+	color:var(--blue);
+	border-radius: .5rem;
+	padding: .2rem 1rem;
+    
+}
+
+.heading span.space{
+	background: none;
+}
+
+.heading span{
+	font-size: 3rem;
+}
+
+@media(max-width:1200px) {
+    html {
+        font-size: 55%;
+    }
+    .btn {
+        padding: .4rem 1.5rem;
+        border: .2rem solid var(--orange);
+        cursor: pointer;
+        font-size: 1, 9rem;
+        margin-left: 100px;
+    }
+    h1{
+        font-size: 2.5rem;
+    }
+    body{
+        width: 100%;
+    }
+}  
+@media(min-width:991px){
+    body{
+        background-size: cover;
+    }
+}
+
+
+.item
+{
+   margin: 20px; 
+   border-radius: 2rem;
+}
+
+
+.image-link {
+    display: inline-block;
+    position: relative;
+}
+
+.image-link img {
+    display: block;
+}
+
+.image-link figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    color: #eee;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    }
+
+    .image-link:hover figcaption {
+        opacity: 1;
+    }
+
+    .place{
+        display:flex;
+        flex-direction: row;
+    }

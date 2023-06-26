@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+
+</head>
+
+<body>
+    <div *ngFor="let item of filteredvalues">
+        <Section>
+            <div class="overview">
+                <h1 style="font-size: 60px; font-weight: bold;">{{item.hotelname}},{{item.place}}</h1>
+                <h5>{{item.address}}</h5>
+                <br>
+                <br>
+                <div class="flex-container">
+                    <div class="leftsidetext">
+                        <h3> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{item.aboutus}}</h3>
+                    </div>
+                    <div class="flex-item"></div>
+                    <img class="item" src="{{item.introimage}}" style="width: 600px;height: 400px">
+                </div>
+            </div>
+        </Section>
+        <br><br>
+        <h1 style="font-size: 60px; font-weight: bold;">Gallery</h1>
+        <carousel>
+            <slide>
+              <img src="{{item. imageone}}" alt="" style="width: 1200px;height: 500px; margin: 4rem;">
+            </slide>
+            
+            <slide>
+                <img src="{{item. imagetwo}}" alt="" style="width: 1200px;height: 500px; margin: 4rem;">
+              </slide>
+            <slide>
+                <img src="{{item. imagethree}}" alt="" style="width: 1200px;height: 500px; margin: 4rem;">
+            </slide>
+            <slide>
+                <img src="{{item. imagefour}}" alt="" style="width: 1200px;height: 500px; margin: 4rem;">
+            </slide>
+            <slide>
+                <img src="{{item. imagefive}}" alt="" style="width: 1200px;height: 500px; margin: 4rem;">
+            </slide>
+            <slide>
+                <img src="{{item. imagesix}}" alt="" style="width: 1200px;height: 500px; margin: 4rem;">
+            </slide>
+            <slide>
+                <img src="{{item. imageseven}}" alt="" style="width: 1200px;height: 500px; margin: 4rem;">
+            </slide>
+            <slide>
+                <img src="{{item. imageeight}}" alt="" style="width: 1200px;height: 500px; margin: 4rem;">
+            </slide>
+
+        </carousel>
+
+        <br><br>
+        <h1 style="font-size: 60px; font-weight: bold;">Select your rooms</h1>
+        <br>
+        <section class="rooms">
+            <div class="deluxeroom">
+                <div class="image">
+                    <img class="item" src="{{item.roomone}}" style="width: 270px;height: 300px;">
+                </div>
+                <div class="Reserve">
+                    <div class="text">
+                        <h4>Deluxe-room</h4>
+                        <h4>Rs.{{item.amountone}}</h4>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="deluxeroom-twin">
+                <div class="image">
+                    <img class="item" src="{{item.roomtwo}}" style="width: 270px;height: 300px;">
+                </div>
+                <div class="Reserve">
+                    <div class="text">
+                        <h4>Deluxeroom-Twin</h4>
+                        <h4>Rs.{{item.amounttwo}}</h4>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="single-room">
+                <div class="image">
+                    <img class="item" src="{{item.roomthree}}" style="width: 270px;height: 300px;">
+                </div>
+                <div class="Reserve">
+                    <div class="text">
+                        <h4>Single-Room</h4>
+                        <h4>Rs.{{item.amountthree}}</h4>
+                    </div>
+
+
+                </div>
+            </div>
+            <div class="double-room">
+                <div class="image">
+
+                    <img class="item" src="{{item.roomfour}}" style="width: 270px;height: 300px;">
+                </div>
+                <div class="Reserve">
+                    <div class="text">
+                        <h4>Double-Room</h4>
+                        <h4>Rs.{{item.amountfour}}</h4>
+                    </div>
+
+                </div>
+            </div>
+        </section><br>
+        <br>
+        <br><br><br><br><br><br><br><br><br>
+        <section>
+            <tbody>
+                <tr id="header">
+
+                    <th>Type of Rooms</th>
+                    <th>NoofRooms Available</th>
+                    <th>NoofPersons Allowed PerRoom</th>
+                    <th>No of Rooms</th>
+                    <th>No of Days</th>
+                    <th>Noof persons</th>
+                    <th>Total Amount</th>
+                </tr>
+                <tr>
+                    <td>{{item.typeone}}</td>
+                    <td>{{item.typeoneroomcount}}</td>
+                    <td>{{item.typeonenoofpersons}}</td>
+                    <td><input type="number" [(ngModel)]="roomone"></td>
+                    <td><input type="number" [(ngModel)]="daysone"></td>
+                    <td><input type="number" [(ngModel)]="typeonenoofpersons"></td>
+                    <td><button (click)="getamount(roomone,daysone,typeonenoofpersons,item.amountone,item.typeone,item.typeoneroomcount,item.typeonenoofpersons)">Get amount
+                            Rs.{{typeoneamount}}</button></td>
+
+                </tr>
+                <tr>
+
+                    <td>{{item.typetwo}}</td>
+                    <td>{{item.typetworoomcount}}</td>
+                    <td>{{item.typetwonoofpersons}}</td>
+                    <td><input type="number" [(ngModel)]="roomtwo"></td>
+                    <td><input type="number" [(ngModel)]="daystwo"></td>
+                    <td><input type="number" [(ngModel)]="typetwonoofpersons"></td>
+                    <td><button (click)="getamount(roomtwo,daystwo,typetwonoofpersons,item.amounttwo,item.typetwo,item.typetworoomcount,item.typetwonoofpersons)">Get amount Rs.{{
+                            typetwoamount}}</button></td>
+                <tr>
+
+                    <td>{{item.typethree}}</td>
+                    <td>{{item.typethreeroomcount}}</td>
+                    <td>{{item.typethreenoofpersons}}</td>
+                    <td><input type="number" [(ngModel)]="roomthree"></td>
+                    <td><input type="number" [(ngModel)]="daysthree"></td>
+                    <td><input type="number" [(ngModel)]="typethreenoofpersons"></td>
+                    <td><button (click)="getamount(roomthree,daysthree,typethreenoofpersons,item.amountthree,item.typethree,item.typethreeroomcount,item.typethreenoofpersons)"
+                            [(ngModel)]="amountfour">Get amount Rs.{{ typethreeamount}}</button></td>
+                </tr>
+                <tr>
+
+
+                    <td>{{item.typefour}}</td>
+                    <td>{{item.typefourroomcount}}</td>
+                    <td>{{item.typefournoofpersons}}</td>
+                    <td><input type="number" [(ngModel)]="roomfour"></td>
+                    <td><input type="number" [(ngModel)]="daysfour"></td>
+                    <td><input type="number" [(ngModel)]="typefournoofpersons"></td>
+                    <td><button (click)="getamount(roomfour,daysfour,typefournoofpersons,item.amountfour,item.typefour,item.typefourroomcount,item.typefournoofpersons)" [(ngModel)]="amountfour">Get
+                            amount Rs.{{typefouramount}}</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button (click)="Grandtotal(item.hotelname)" routerLink="/home/Hotels/finalpaymentpage">Pay</button></td>
+                </tr>
+
+            </tbody>
+        </section>
+
+        <br><br><br> <br>
+        <br>
+        <br><br><br><br>
+
+        <section class="review">
+            <div class="review-slider">
+                <div class="wrapper">
+                    <div class="slider">
+                        <div class="box">
+                            <h3>{{item.personone}}</h3>
+                            <p>{{item.reviewone}}</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="box">
+                            <h3>{{item.persontwo}}</h3>
+                            <p>{{item.reviewtwo}}</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="box">
+                            <h3>{{item.personthree}}</h3>
+                            <p>{{item.reviewthree}}</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+</body>
+
+</html>

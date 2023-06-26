@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container" id="container">
+		<div class="form-container sign-in-container">
+			<!--registrationForm.status!=='INVAILD' && -->
+			<form [formGroup]="registrationForm" (ngsubmit)="onSubmit()">
+				<h1>Sign Up</h1>
+				<div class="social-container">
+					<a href="#" class="social"><i class="fa fa-facebook"></i></a>
+					<a href="#" class="social"><i class="fa fa-google"></i></a>
+					<a href="#" class="social"><i class="fa fa-linkedin"></i></a>
+				</div>
+
+				<span>or use your account</span>
+				<input type="text" name="name" placeholder="Name" formControlName="name" [ngClass]="{error:getControl('name')?.errors && getControl('name').touched}" [(ngModel)]=" valueone ">
+
+				<div *ngIf="getControl('name')?.errors && getControl('name')?.touched" style="color: red; align-content: last baseline;">
+					<small class="text-danger" *ngIf="getControl('name')?.errors?.['required']">Name is required</small>
+					<small class="text-danger" *ngIf="getControl('name')?.errors?.['maxlength']">Only 30 characters are allowed</small>
+				</div> 
+				
+				
+				
+				
+				<input type="email" name="email" placeholder="Email" formControlName="email" [ngClass]="{error:getControl('email')?.errors && getControl('email').touched}"  [(ngModel)]=" valuetwo ">
+				<div *ngIf="getControl('email')?.errors && getControl('email')?.touched" style="color: red; align-content: last baseline;">
+					<small class="text-danger" *ngIf="getControl('email')?.errors?.['required']">Email is required</small>
+					<small class="text-danger" *ngIf="getControl('email')?.errors?.['email']">Please enter a vaild type</small>
+				</div> 
+				
+				<input type="password" name="password" placeholder="Password" formControlName="password" [ngClass]="{error:getControl('password')?.errors && getControl('password').touched}" [(ngModel)]=" valuethree ">
+				
+				<div *ngIf="getControl('password')?.errors && getControl('password')?.touched" style="color: red; align-content: last baseline;">
+					<small class="text-danger" *ngIf="getControl('password')?.errors?.['required']">Password is required</small>
+					<small class="text-danger" *ngIf="getControl('password')?.errors?.['minlength']">Please enter vaild password with the maximum length of 8</small>
+				</div> 
+				
+				
+				<input type="text" name="phonenumber" placeholder="Phone Number" formControlName="phone" [ngClass]="{error:getControl('phone')?.errors && getControl('phone').touched}" [(ngModel)]=" valuefour ">
+				
+				<div *ngIf="getControl('phone')?.errors && getControl('phone')?.touched" style="color: red; align-content: last baseline;">
+					<small class="text-danger" *ngIf="getControl('phone')?.errors?.['required']">phonenumber is required</small>
+					<small class="text-danger" *ngIf="getControl('phone')?.errors?.['minlength']">Please enter vaild phonenumber with the minimum length of 10</small>
+				</div> 
+
+				<!-- [disabled]="registrationForm.status==='is-invalid'" (click)="onSubmit()"-->
+
+				<button class="btn" (click)="checkvaule()">Sign Up</button>
+				<p class="register">Already Registered User?<a href="home/login" style="color:blue;">SignIn here!</a>
+				</p>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

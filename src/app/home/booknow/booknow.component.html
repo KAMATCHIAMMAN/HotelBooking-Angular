@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+  <title>KS HotelBooking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <section class="book" id="book">
+    <div class="flex-container">
+      <div class="leftsidetext">
+        <h1>
+          World is a book ,Read the entire book in this one page
+        </h1><br>
+        <h3 style="font-weight: bold;color: rgb(255, 253, 253);">
+          Book your hotels across the india,To see the wonders...
+        </h3>
+      </div>
+      <div class="flex-item"></div>
+      <form action="#">
+        <h4>Location </h4>
+        <input type="text" name="location" placeholder="Enter Location" [(ngModel)]="location">
+        <h4>How many people</h4>
+        <input type="number" name="people" placeholder="How Many people" [(ngModel)]="count">
+        <h4>Arrival</h4>
+        <input type="date" name="arrival" placeholder="arrival" [(ngModel)]="from" [min]="minDate">
+        <h4>Leaving</h4>
+        <input type="date" name="Leaving" placeholder="leaving" [(ngModel)]="to" [min]="minDate"><br><br>
+        <a routerLink="home/Hotels/thanjaihotelone" class="btn" (click)="isfilled()">Search</a>
+      </form>
+    </div>
+    <br>
+  </section>
+  <section class="packages" id="packages">
+    <div class="row">
+      <div *ngFor="let item of filteredvalues" class="col-md-3">
+        <div class="hotels">
+          <a routerLink="{{item.routerlink}}" class="image-link" (click)="getname(item.hotelname)">
+            <div class="image">
+              <figure>
+                <img class="item" src="{{item.imagelink}}" style="width: 300px; height: 300px;">
+                <figcaption>{{item.hotelname}}<br>{{item.place}}</figcaption>
+                <button class="btn">Reserve</button>
+              </figure>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

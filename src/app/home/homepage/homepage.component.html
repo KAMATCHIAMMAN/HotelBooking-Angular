@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <meta name="viewpoint" content="width=device-width,initial-scale=0.1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <section class="home" id="home">
+    <div class="content">
+      <h2 style="color: black;font-weight:bold; font-size: 50px;">Yaadhum Oore Yaavarum Kelir</h2>
+      <p style="text-align: center;color: black;font-size: 30px;font-weight:bold;font-size: 30px;">Make Your Journey
+        Happy With Us</p>
+      <a routerLink='/home/booknow' class="btn">Book Now</a>
+    </div>
+    <div class="video-container">
+      <video
+        src="https://player.vimeo.com/external/409203683.sd.mp4?s=ec1a92b4713d1b59ea984f9a8de88ad48e01d1ac&profile_id=164&oauth2_token_id=57447761"
+        loop autoplay muted></video>
+    </div>
+  </section>
+
+  <h1>Wonders Of India</h1><br><br>
+  <div class="place" *ngFor="let item of placedata ">
+    <app-touristplace [placedetails]="item"></app-touristplace>
+  </div>
+</body>
+
+</html>

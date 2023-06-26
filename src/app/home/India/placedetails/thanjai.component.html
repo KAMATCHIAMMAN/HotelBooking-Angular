@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <meta name="viewpoint" content="width=device-width,initial-scale=0.1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+  <div *ngFor="let item of filteredvalues">
+
+    <h1>{{item.heading}},{{item.name}}</h1>
+    <section>
+      <br>
+      <p>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{item.textone}}</p>
+      <br>
+      <img src="{{item.imageone}}">
+      <br>
+      <p>{{item.texttwo}}</p>
+      <br>
+      <img src="{{item.imagetwo}}">
+      <h1>{{item.headingtwo}}</h1>
+      <br>
+      <p>{{item.textthree}}</p>
+      <p>{{item.textfour}}</p>
+      <p>{{item.textfive}}</p>
+      <p>{{item.textfive}}</p>
+      <img src="{{item.imagethree}}">
+      <br>
+      <p>{{item. textsix}}</p>
+      <p>{{item. textseven}}</p>
+      <img src="{{item.imagefour}}">
+    </section>
+  </div>
+ 
+    <section class="packages" id="packages">
+      <h1 style="margin-top: 1%;">Visit Now</h1>
+      <div *ngFor="let item of filteredhotels">
+      <div class="flex-container-two">
+        <div class="hotels">
+          <a routerLink="{{item.routerlink}}" class="image-link" (click)="getname(item.hotelonename)">
+            <div class="image">
+              <figure>
+                <img class="item" src="{{item.imagelink}}" style="width: 300px; height: 300px;">
+                <figcaption>{{item.hotelname }}<br>{{item.place}}</figcaption>
+                <button class="btn">Reserve</button>
+              </figure>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    </section>
+ 
+</body>
+
+</html>
